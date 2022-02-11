@@ -1,13 +1,210 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url(./assets/galaxy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar__container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__image {
+  width: 100px;
+  cursor: pointer;
+}
+
+.favCounter {
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  width: 200px;
+  background-color: #212529;
+  color: rgb(255, 208, 0);
+}
+
+.dropdown__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.home-container {
+  width: 90%;
+  margin: 100px auto 0;
+  /* padding: 0 80px; */
+  /* display: flex; */
+  /* overflow: auto;
+  white-space: nowrap; */
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.people,
+.planets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  justify-items: center;
+
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; */
+  /* width: 90%;
+  margin: 0 auto; */
+}
+
+h1 {
+  color: rgb(255, 208, 0);
+}
+
+.card {
+  width: 350px !important;
+  margin: 20px 0;
+  background-color: #212529;
+  color: #fff;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: 50% 10%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faRegHeart,
+.faHeart {
+  font-size: 25px;
+}
+
+.individualCharacter {
+  width: 90%;
+  margin: 100px auto;
+}
+
+.individualCharacter__body,
+.individualPlanet__body {
+  display: flex;
+}
+
+.individualCharacter__image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 10%;
+}
+
+.individualCharacter__description,
+.individualplanet__description {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.individualCharacter hr {
+  width: 100%;
+  height: 3px;
+  color: rgb(255, 208, 0);
+}
+
+.individualCharacter__details {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  color: rgb(255, 208, 0);
+  font-size: 1.5rem;
+}
+
+.individualPlanet {
+  width: 90%;
+  margin: 100px auto;
+}
+
+.individualPlanet hr {
+  width: 100%;
+  height: 3px;
+  color: rgb(255, 208, 0);
+}
+
+.individualPlanet__details {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  color: rgb(255, 208, 0);
+  font-size: 1.5rem;
+}
+
+.icon {
+  font-size: 25px;
+  color: rgb(255, 208, 0);
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #000;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 280px !important;
+  }
+
+  .people,
+  .planets {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 280px !important;
+  }
+
+  .people,
+  .planets {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 280px !important;
+  }
+
+  .people,
+  .planets {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
 }

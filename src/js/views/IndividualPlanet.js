@@ -1,0 +1,85 @@
+import React, { useState, useEffect, useContext } from "react";
+import PropTypes from "prop-types";
+import { Link, useParams } from "react-router-dom";
+import { Context } from "../store/appContext";
+const imageUrl = require.context('../../assets/planets', true);
+
+
+export const IndividualPlanet = () => {
+
+    const { store, actions } = useContext(Context);
+    const { planet } = store;
+    const { id } = useParams();
+
+    useEffect(() => {
+        actions.getPlanetById('planets', id);
+    }, [id])
+
+    return (
+        <>
+            {
+                planet !== undefined
+                    ?
+                    (
+                        <div className="individualPlanet animate__animated animate__fadeIn">
+                            <div className="individualPlanet__body">
+                                <img
+                                    className="individualCharacter__image animate__animated animate__fadeInLeft"
+                                    src={imageUrl(`./${planet.name.replace(' ', '-')}.jpg`)}
+                                    alt={`${planet.name}`} />
+                                <div className="individualCharacter__description">
+                                    <h1>{planet.name}</h1>
+                                </div>
+                            </div>
+                            <hr />
+
+                            <div className="individualCharacter__details">
+                                <div>
+                                    <p>Name</p>
+                                    <p>{planet.name}</p>
+                                </div>
+                                <div>
+                                    <p>Rotation period</p>
+                                    <p>{planet.rotation_period}</p>
+                                </div>
+                                <div>
+                                    <p>Orbital period</p>
+                                    <p>{planet.orbital_period}</p>
+                                </div>
+                                <div>
+                                    <p>Diameter</p>
+                                    <p>{planet.diameter}</p>
+                                </div>
+                                <div>
+                                    <p>Climate</p>
+                                    <p>{planet.climate}</p>
+                                </div>
+                                <div>
+                                    <p>Gravity</p>
+                                    <p>{planet.gravity}</p>
+                                </div>
+                                <div>
+                                    <p>Terrain</p>
+                                    <p>{planet.terrain}</p>
+                                </div>
+                                <div>
+                                    <p>Population</p>
+                                    <p>{planet.population}</p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                    :
+                    (
+                        <div className="spinner">
+                            <div className="spinner-grow text-warning" role="status">
+                                <span className="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    )
+            }
+        </>
+    );
+};
+
+
