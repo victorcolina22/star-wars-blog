@@ -5,25 +5,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			fetchPeople: async () => {
-				await fetch('https://swapi.dev/api/people')
+				await fetch('https://www.swapi.tech/api/people')
 					.then(data => data.json())
 					.then(data => setStore({ people: data }))
 					.catch(error => console.log(error))
 			},
 			fetchPlanets: async () => {
-				await fetch('https://swapi.dev/api/planets')
+				await fetch('https://www.swapi.tech/api/planets')
 					.then(data => data.json())
 					.then(data => setStore({ planets: data }))
 					.catch(error => console.log(error))
 			},
 			getCharacterById: async (type, id) => {
-				await fetch(`https://swapi.dev/api/${type}/${id}`)
+				await fetch(`https://www.swapi.tech/api/${type}/${id}`)
 					.then(data => data.json())
 					.then(data => setStore({ character: data }))
 					.catch(error => console.log(error))
 			},
 			getPlanetById: async (type, id) => {
-				await fetch(`https://swapi.dev/api/${type}/${id}`)
+				await fetch(`https://www.swapi.tech/api/${type}/${id}`)
 					.then(data => data.json())
 					.then(data => setStore({ planet: data }))
 					.catch(error => console.log(error))
@@ -40,7 +40,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						...store.favorites,
 						{ type, name, id }
 					]
-				})
+				});
+				localStorage.setItem('favs', JSON.stringify(store.favorites));
 			},
 			deleteFavorite: (name) => {
 				const store = getStore();
@@ -50,6 +51,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({
 					favorites: newArray
 				});
+				localStorage.setItem('favs', JSON.stringify(newArray));
 			}
 		}
 	};

@@ -27,9 +27,9 @@ export const People = ({ store, actions }) => {
                                 loading="lazy" />
                             <div className="card-body">
                                 <h5 className="card-title">{character.name}</h5>
-                                <p className="card-text">Gender: {character.gender}</p>
+                                {/* <p className="card-text">Gender: {character.gender}</p>
                                 <p className="card-text">Hair color: {character.hair_color}</p>
-                                <p className="card-text">Eye color: {character.eye_color}</p>
+                                <p className="card-text">Eye color: {character.eye_color}</p> */}
                                 <div className='buttons'>
                                     <Link to={`/character/${i + 1}`} className="btn btn-outline-warning">Learn more!</Link>
                                     <FontAwesomeIcon

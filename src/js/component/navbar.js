@@ -12,8 +12,9 @@ import logo from '../../assets/star-wars-logo.png';
 export const Navbar = () => {
 
 	const { store, actions } = useContext(Context);
-	const { favorites } = store;
+	// const { favorites } = store;
 	const { deleteFavorite } = actions;
+	const favorites = JSON.parse(localStorage.getItem('favs')) || [];
 
 	return (
 		<nav className="navbar navbar-dark bg-dark mb-3">

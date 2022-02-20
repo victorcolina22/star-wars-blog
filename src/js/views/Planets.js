@@ -26,9 +26,9 @@ export const Planets = ({ store, actions }) => {
                                 alt={`${planet.name}-image`} />
                             <div className="card-body">
                                 <h5 className="card-title">{planet.name}</h5>
-                                <p className="card-text">Climate: {planet.climate}</p>
+                                {/* <p className="card-text">Climate: {planet.climate}</p>
                                 <p className="card-text">Population: {planet.population}</p>
-                                <p className="card-text">Diameter: {planet.diameter}</p>
+                                <p className="card-text">Diameter: {planet.diameter}</p> */}
                                 <div className='buttons'>
                                     <Link to={`/planets/${i + 1}`} className="btn btn-outline-warning">Learn more!</Link>
                                     <FontAwesomeIcon
