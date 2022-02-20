@@ -10,7 +10,7 @@ const imageUrl = require.context('../../assets/characters', true);
 
 export const People = ({ store, actions }) => {
 
-    const { addFavorite } = actions;
+    const { addFavorite, findInFavorite } = actions;
 
     return (
         <>
@@ -34,8 +34,8 @@ export const People = ({ store, actions }) => {
                                     <Link to={`/character/${i + 1}`} className="btn btn-outline-warning">Learn more!</Link>
                                     <FontAwesomeIcon
                                         className='icon'
-                                        icon={faHeart}
-                                        onClick={() => addFavorite('character', character.name, i + 1)} />
+                                        icon={(findInFavorite(character.name)) ? faHeartRegular : faHeart}
+                                        onClick={() => addFavorite('people', character.name, character.uid)} />
                                 </div>
                             </div>
                         </div>

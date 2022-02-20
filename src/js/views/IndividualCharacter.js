@@ -13,18 +13,18 @@ export const IndividualCharacter = () => {
     const { character } = store;
     const { id } = useParams();
     const navigate = useNavigate();
-    const res = (character === undefined) ? 'not found' : character.result;
+    const res = (character !== undefined) && character.result;
 
-    useEffect(() => {
-        actions.getCharacterById('people', id);
-    }, [id]);
+    // useEffect(() => {
+    //     actions.getCharacterById('people', id);
+    // }, [id]);
 
-    // useMemo(() => actions.getCharacterById('people', id), [id]);
+    useMemo(() => actions.getCharacterById('people', id), [id]);
 
     return (
         <>
             {
-                character !== undefined
+                res // Si es "true"
                     ?
                     (
                         <div className="individualCharacter animate__animated animate__fadeIn">
