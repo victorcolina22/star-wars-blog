@@ -5,14 +5,20 @@ import { Context } from "../store/appContext";
 import { People } from "./People";
 import { Planets } from "./Planets";
 
+import video from '../../assets/video/space-video.mp4';
+
 
 export const Home = () => {
 
-	const { store, actions } = useContext(Context);
+	// const { store, actions } = useContext(Context);
 
 	return (
-		<div className="home-container animate__animated animate__fadeIn">
-			{
+		<>
+			<video autoPlay muted loop id="video">
+				<source src={video} type="video/mp4" />
+			</video>
+			<div className="home-container animate__animated animate__fadeInUp animate__slower">
+				{/* {
 				!!store.people
 					?
 					(
@@ -30,7 +36,9 @@ export const Home = () => {
 							</div>
 						</div>
 					)
-			}
-		</div>
+			} */}
+				<h1 className="home-container__title">star wars blog</h1>
+			</div>
+		</>
 	)
 }
