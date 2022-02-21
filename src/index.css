@@ -95,7 +95,7 @@
   text-transform: uppercase;
   text-decoration: none;
   transition: 250ms ease-in-out;
-  padding: 0 30px;
+  padding: 0 30px 3px;
 }
 
 .home-container__button:hover {
@@ -245,6 +245,20 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .home-container {
+    margin: 0 auto;
+  }
+
+  .home-container__title {
+    font-size: 5rem;
+    -webkit-text-stroke: 2px #ffc107;
+  }
+
+  .home-container__button {
+    font-size: 1.6rem;
+    padding: 0 25px 3px;
+  }
+
   .card {
     width: 280px !important;
   }
@@ -265,6 +279,20 @@ h1 {
 }
 
 @media (max-width: 480px) {
+  .home-container {
+    margin: 0 auto;
+  }
+
+  .home-container__title {
+    font-size: 5rem;
+    -webkit-text-stroke: 2px #ffc107;
+  }
+
+  .home-container__button {
+    font-size: 1.6rem;
+    padding: 0 25px 3px;
+  }
+
   .card {
     width: 280px !important;
   }

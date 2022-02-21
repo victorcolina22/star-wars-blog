@@ -23,7 +23,7 @@ const Layout = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div>
+		<>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
@@ -39,7 +39,7 @@ const Layout = () => {
 					</Routes>
 				</ScrollToTop>
 			</BrowserRouter>
-		</div>
+		</>
 	);
 };
 
