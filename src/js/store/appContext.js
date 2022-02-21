@@ -24,7 +24,7 @@ const injectContext = PassedComponent => {
 		useEffect(() => {
 			state.actions.fetchPeople();
 			state.actions.fetchPlanets();
-			const dataFromLocalStorage = JSON.parse(localStorage.getItem('favs'));
+			const dataFromLocalStorage = JSON.parse(localStorage.getItem('favs')) || [];
 			state.store.favorites = dataFromLocalStorage;
 		}, [setState]);
 		// useMemo(() => state.actions.fetchPeople(), [setState]);

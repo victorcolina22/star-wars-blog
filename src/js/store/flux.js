@@ -54,7 +54,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				localStorage.setItem('favs', JSON.stringify(newArray));
 			},
 			findInFavorite: (name) => {
-				const store = JSON.parse(localStorage.getItem('favs'));
+				const store = JSON.parse(localStorage.getItem('favs')) || [];
 
 				return store.find(value => value.name === name) ? true : false;
 			}
