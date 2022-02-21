@@ -1,10 +1,10 @@
-/* body {
+body {
   background-image: url(./assets/galaxy.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-} */
+}
 
 #video {
   position: fixed;
@@ -111,10 +111,21 @@
   transform: translate(-50%, -50%);
 }
 
+/* .people-background,
+.planets-background {
+  background-image: url(./assets/galaxy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+} */
+
 .people-container,
 .planets-container {
   width: 90%;
-  margin: 30px auto 0;
+  margin: 0 auto;
+  padding-top: 30px;
 }
 
 .people,
@@ -129,10 +140,6 @@
   justify-content: space-between; */
   /* width: 90%;
   margin: 0 auto; */
-}
-
-h1 {
-  color: #ffc107;
 }
 
 .card {
@@ -166,7 +173,7 @@ h1 {
 
 .individualCharacter {
   width: 90%;
-  margin: 100px auto;
+  margin: 30px auto;
 }
 
 .individualCharacter__body,
@@ -205,7 +212,7 @@ h1 {
 
 .individualPlanet {
   width: 90%;
-  margin: 100px auto;
+  margin: 30px auto;
 }
 
 .individualPlanet hr {
@@ -246,7 +253,7 @@ h1 {
 
 @media (max-width: 768px) {
   .home-container {
-    margin: 0 auto;
+    margin: 100px auto;
   }
 
   .home-container__title {

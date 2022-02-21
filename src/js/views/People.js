@@ -13,8 +13,8 @@ export const People = ({ store, actions }) => {
     const { addFavorite, findInFavorite } = actions;
 
     return (
-        <div className='people-container'>
-            <h1>Characters</h1>
+        // <div className='people-background'>
+        <section className='people-container'>
             <div className='people animate__animated animate__fadeIn'>
                 {
                     !!store.people
@@ -54,6 +54,7 @@ export const People = ({ store, actions }) => {
                         )
                 }
             </div>
-        </div>
+        </section>
+        // </div>
     )
 }

@@ -31,8 +31,8 @@ const Layout = () => {
 						<Route exact path="/" element={<Home />} />
 						<Route exact path="/people" element={<People store={store} actions={actions} />} />
 						<Route exact path="/planets" element={<Planets store={store} actions={actions} />} />
-						<Route exact path="/character/:id" element={<IndividualCharacter />} />
-						<Route exact path="/planets/:id" element={<IndividualPlanet />} />
+						<Route exact path="/people/:id" element={<IndividualCharacter />} />
+						<Route exact path="/planet/:id" element={<IndividualPlanet />} />
 						{/* <Route>
 							<h1>Not found!</h1>
 						</Route> */}

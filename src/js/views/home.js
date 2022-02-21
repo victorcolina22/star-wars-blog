@@ -18,6 +18,7 @@ export const Home = () => {
 			<video autoPlay muted loop id="video">
 				<source src={video} type="video/mp4" />
 			</video>
+
 			<div className="home-container animate__animated animate__fadeInUp animate__slower">
 				{/* {
 				!!store.people

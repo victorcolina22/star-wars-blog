@@ -13,8 +13,8 @@ export const Planets = ({ store, actions }) => {
     const { addFavorite, findInFavorite } = actions;
 
     return (
-        <div className='planets-container'>
-            <h1>Planets</h1>
+        // <div className='planets-background'>
+        <section className='planets-container'>
             <div className='planets animate__animated animate__fadeIn'>
                 {
                     !!store.planets
@@ -53,6 +53,7 @@ export const Planets = ({ store, actions }) => {
                         )
                 }
             </div>
-        </div>
+        </section>
+        // </div>
     )
 }
