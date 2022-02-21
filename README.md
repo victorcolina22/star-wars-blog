@@ -71,6 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # STAR WARS BLOG
 
-Is a simple Star Wars universe blog that is in progress.
+Is a simple Star Wars universe blog using the "swapi" API that is in progress.
 
 ![alt text](./src/assets/starwars-preview.PNG)
