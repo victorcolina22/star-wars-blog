@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -13,7 +13,6 @@ export const People = ({ store, actions }) => {
     const { addFavorite, findInFavorite } = actions;
 
     return (
-        // <div className='people-background'>
         <section className='people-container'>
             <div className='people animate__animated animate__fadeIn'>
                 {
@@ -33,7 +32,7 @@ export const People = ({ store, actions }) => {
                                 <p className="card-text">Hair color: {character.hair_color}</p>
                                 <p className="card-text">Eye color: {character.eye_color}</p> */}
                                         <div className='buttons'>
-                                            <Link to={`/character/${i + 1}`} className="btn btn-outline-warning">Learn more!</Link>
+                                            <Link to={`/people/${i + 1}`} className="btn btn-outline-warning">Learn more!</Link>
                                             <FontAwesomeIcon
                                                 className='icon'
                                                 icon={(findInFavorite(character.name)) ? faHeartRegular : faHeart}
@@ -55,6 +54,5 @@ export const People = ({ store, actions }) => {
                 }
             </div>
         </section>
-        // </div>
     )
 }

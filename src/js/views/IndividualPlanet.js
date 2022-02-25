@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import React, { useEffect, useContext } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 const imageUrl = require.context('../../assets/planets', true);
 
@@ -30,7 +29,7 @@ export const IndividualPlanet = () => {
                                     src={imageUrl(`./${res.properties.name.replace(' ', '-')}.jpg`)}
                                     alt={`${res.properties.name}`} />
                                 <div className="individualCharacter__description">
-                                    <h1>{res.properties.name}</h1>
+                                    <h2>{res.properties.name}</h2>
                                 </div>
                             </div>
                             <hr />
@@ -88,5 +87,3 @@ export const IndividualPlanet = () => {
         </>
     );
 };
-
-

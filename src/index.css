@@ -195,6 +195,12 @@ body {
   text-align: center;
 }
 
+.individualCharacter__description h2,
+.individualplanet__description h2 {
+  font-size: 2.5rem;
+  color: #ffc107;
+}
+
 .individualCharacter hr {
   width: 100%;
   height: 3px;

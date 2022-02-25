@@ -13,7 +13,6 @@ export const Planets = ({ store, actions }) => {
     const { addFavorite, findInFavorite } = actions;
 
     return (
-        // <div className='planets-background'>
         <section className='planets-container'>
             <div className='planets animate__animated animate__fadeIn'>
                 {
@@ -25,7 +24,7 @@ export const Planets = ({ store, actions }) => {
                                     <img
                                         src={imageUrl(`./${planet.name.replace(' ', '-')}.jpg`)}
                                         className="card-img-top"
-                                        alt={`${planet.name}-image`} />
+                                        alt={`${planet.name}`} />
                                     <div className="card-body">
                                         <h5 className="card-title">{planet.name}</h5>
                                         {/* <p className="card-text">Climate: {planet.climate}</p>
@@ -54,6 +53,5 @@ export const Planets = ({ store, actions }) => {
                 }
             </div>
         </section>
-        // </div>
     )
 }

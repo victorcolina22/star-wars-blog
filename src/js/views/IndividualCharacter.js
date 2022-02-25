@@ -1,5 +1,5 @@
-import React, { useEffect, useContext, useMemo } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import React, { useContext, useMemo } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 // Esta es una forma de importar imágenes dinámicamente, se utiliza el "require.context()" para navegar al path donde están
@@ -14,10 +14,6 @@ export const IndividualCharacter = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const res = (character !== undefined) && character.result;
-
-    // useEffect(() => {
-    //     actions.getCharacterById('people', id);
-    // }, [id]);
 
     useMemo(() => actions.getCharacterById('people', id), [id]);
 
@@ -35,7 +31,7 @@ export const IndividualCharacter = () => {
                                     src={imageUrl(`./${res.properties.name.replace(' ', '-')}.jpg`)}
                                     alt={`${res.properties.name}`} />
                                 <div className="individualCharacter__description">
-                                    <h1>{res.properties.name}</h1>
+                                    <h2>{res.properties.name}</h2>
                                 </div>
                             </div>
                             <hr />
