@@ -31,7 +31,7 @@ export const Planets = ({ store, actions }) => {
                                 <p className="card-text">Population: {planet.population}</p>
                                 <p className="card-text">Diameter: {planet.diameter}</p> */}
                                         <div className='buttons'>
-                                            <Link to={`/planets/${i + 1}`} className="btn btn-outline-warning">Learn more!</Link>
+                                            <Link to={`/planet/${i + 1}`} className="btn btn-outline-warning">Learn more!</Link>
                                             <FontAwesomeIcon
                                                 className='icon'
                                                 icon={(findInFavorite(planet.name)) ? faHeartRegular : faHeart}
